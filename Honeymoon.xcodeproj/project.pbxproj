@@ -15,6 +15,7 @@
 		E7625BDB276B635500511E4B /* DestinationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BDA276B635500511E4B /* DestinationData.swift */; };
 		E7625BE1276B643B00511E4B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BE0276B643B00511E4B /* CardView.swift */; };
 		E7625BE2276B657100511E4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BDF276B641D00511E4B /* ContentView.swift */; };
+		E7625BE4276B7CFB00511E4B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BE3276B7CFB00511E4B /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E7625BDA276B635500511E4B /* DestinationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationData.swift; sourceTree = "<group>"; };
 		E7625BDF276B641D00511E4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7625BE0276B643B00511E4B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		E7625BE3276B7CFB00511E4B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				E7625BDF276B641D00511E4B /* ContentView.swift */,
 				E7625BE0276B643B00511E4B /* CardView.swift */,
+				E7625BE3276B7CFB00511E4B /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7625BDB276B635500511E4B /* DestinationData.swift in Sources */,
+				E7625BE4276B7CFB00511E4B /* HeaderView.swift in Sources */,
 				E7625BE2276B657100511E4B /* ContentView.swift in Sources */,
 				E7625BD8276B631500511E4B /* DestinationModel.swift in Sources */,
 				E7625BE1276B643B00511E4B /* CardView.swift in Sources */,
