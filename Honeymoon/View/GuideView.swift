@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GuideView: View {
+  @Environment(\.presentationMode) var presentationMode
+  
   var body: some View {
     ScrollView(.vertical, showsIndicators: false) {
       VStack(alignment: .center, spacing: 20) {
