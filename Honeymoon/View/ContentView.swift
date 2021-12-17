@@ -12,17 +12,32 @@ struct ContentView: View {
   @State var showGuide = false
   @State var showInfo = false
   
+  var cardViews: [CardView] = {
+    var views = [CardView]()
+    for destination in destinationData {
+      views.append(CardView(destination: destination))
+    }
+    
+    return views
+  }()
+  
   var body: some View {
     VStack {
+      // MARK: - HEADER
       HeaderView(showGuideView: $showGuide, showInfoVew: $showInfo)
       
       Spacer()
       
-      CardView(destination: destinationData[0])
-        .padding()
+      // MARK: - CARDS
+      ZStack {
+        ForEach(cardViews) { cardView in
+          cardView
+        }
+      }
       
       Spacer()
       
+      // MARK: - FOOTER
       FooterView(showBookingAlert: $showAlert)
     } //: VStack
     .alert(isPresented: $showAlert) {
