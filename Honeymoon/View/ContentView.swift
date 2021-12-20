@@ -14,13 +14,14 @@ struct ContentView: View {
   
   var cardViews: [CardView] = {
     var views = [CardView]()
-    for destination in destinationData {
-      views.append(CardView(destination: destination))
+    for index in 0..<2 {
+      views.append(CardView(destination: destinationData[index]))
     }
     
     return views
   }()
   
+  // MARK: - TOP CARD
   private func isTopCard(cardView: CardView) -> Bool {
     guard let index = cardViews.firstIndex(where: { $0.id == cardView.id }) else {
       return false
