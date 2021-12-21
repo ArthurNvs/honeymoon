@@ -11,6 +11,7 @@ struct ContentView: View {
   @State var showAlert = false
   @State var showGuide = false
   @State var showInfo = false
+  @GestureState private var dragState = DragState.inactive
   
   var cardViews: [CardView] = {
     var views = [CardView]()
@@ -29,10 +30,46 @@ struct ContentView: View {
     return index == 0
   }
   
+  // MARK: - DRAG STATES
+  enum DragState {
+    case inactive
+    case pressing
+    case dragging(translation: CGSize)
+    
+    var translation: CGSize {
+      switch self {
+      case .inactive, .pressing:
+        return .zero
+      case .dragging(let translation):
+        return translation
+      }
+    } //: translation
+    
+    var isDragging: Bool {
+      switch self {
+      case .dragging:
+        return true
+      case .pressing, .inactive:
+        return false
+      }
+    } //: isDragging
+    
+    var isPressing: Bool {
+      switch self {
+      case .pressing, .dragging:
+        return true
+      case .inactive:
+        return false
+      }
+    } //: isPressing
+  } //: DragState
+  
   var body: some View {
     VStack {
       // MARK: - HEADER
-      HeaderView(showGuideView: $showGuide, showInfoVew: $showInfo)
+      HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
+        .opacity(dragState.isDragging ? 0.0 : 1.0)
+        .animation(.default, value: nil)
       
       Spacer()
       
@@ -48,6 +85,8 @@ struct ContentView: View {
       
       // MARK: - FOOTER
       FooterView(showBookingAlert: $showAlert)
+        .opacity(dragState.isDragging ? 0.0 : 1.0)
+        .animation(.default, value: nil)
     } //: VStack
     .alert(isPresented: $showAlert) {
       Alert(
