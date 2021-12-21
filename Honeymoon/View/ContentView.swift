@@ -13,6 +13,7 @@ struct ContentView: View {
   @State var showInfo = false
   @GestureState private var dragState = DragState.inactive
   
+  // MARK: - CARD VIEWS
   var cardViews: [CardView] = {
     var views = [CardView]()
     for index in 0..<2 {
@@ -43,7 +44,7 @@ struct ContentView: View {
       case .dragging(let translation):
         return translation
       }
-    } //: translation
+    }
     
     var isDragging: Bool {
       switch self {
@@ -52,7 +53,7 @@ struct ContentView: View {
       case .pressing, .inactive:
         return false
       }
-    } //: isDragging
+    }
     
     var isPressing: Bool {
       switch self {
@@ -61,15 +62,15 @@ struct ContentView: View {
       case .inactive:
         return false
       }
-    } //: isPressing
-  } //: DragState
+    }
+  }
   
   var body: some View {
     VStack {
       // MARK: - HEADER
       HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
         .opacity(dragState.isDragging ? 0.0 : 1.0)
-        .animation(.default, value: nil)
+        .animation(.default)
       
       Spacer()
       
@@ -78,6 +79,19 @@ struct ContentView: View {
         ForEach(cardViews) { cardView in
           cardView
             .zIndex(self.isTopCard(cardView: cardView) ? 1 : 0)
+            .gesture(LongPressGesture(minimumDuration: 0.01)
+                      .sequenced(before: DragGesture())
+                      .updating(self.$dragState, body: { (value, state, transaction) in
+              switch value {
+              case .first(true):
+                state = .pressing
+              case .second(true, let drag):
+                state = .dragging(translation: drag?.translation ?? .zero)
+              default:
+                break
+              } //: switch
+            } //:updating body
+          ))
         }
       }
       
@@ -86,7 +100,7 @@ struct ContentView: View {
       // MARK: - FOOTER
       FooterView(showBookingAlert: $showAlert)
         .opacity(dragState.isDragging ? 0.0 : 1.0)
-        .animation(.default, value: nil)
+        .animation(.default)
     } //: VStack
     .alert(isPresented: $showAlert) {
       Alert(
