@@ -18,6 +18,7 @@
 		E7625BE1276B643B00511E4B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BE0276B643B00511E4B /* CardView.swift */; };
 		E7625BE2276B657100511E4B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BDF276B641D00511E4B /* ContentView.swift */; };
 		E7625BE4276B7CFB00511E4B /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BE3276B7CFB00511E4B /* HeaderView.swift */; };
+		E7CC37852774F2950096BEEE /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CC37842774F2950096BEEE /* PlaySound.swift */; };
 		E7CF8D5F276BC189001A39F8 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF8D5E276BC189001A39F8 /* FooterView.swift */; };
 		E7CF8D62276BCAF2001A39F8 /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF8D61276BCAF2001A39F8 /* HeaderComponent.swift */; };
 		E7CF8D64276BCBA7001A39F8 /* GuideComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF8D63276BCBA7001A39F8 /* GuideComponent.swift */; };
@@ -41,6 +42,7 @@
 		E7625BDF276B641D00511E4B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E7625BE0276B643B00511E4B /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		E7625BE3276B7CFB00511E4B /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		E7CC37842774F2950096BEEE /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		E7CF8D5E276BC189001A39F8 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
 		E7CF8D61276BCAF2001A39F8 /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
 		E7CF8D63276BCBA7001A39F8 /* GuideComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideComponent.swift; sourceTree = "<group>"; };
@@ -98,8 +100,9 @@
 		E7625BC5276B5DBA00511E4B /* Honeymoon */ = {
 			isa = PBXGroup;
 			children = (
-				E74EC3DF27749B3A0074389C /* Extension */,
 				E7625BC6276B5DBA00511E4B /* HoneymoonApp.swift */,
+				E7CC37832774F2830096BEEE /* Helper */,
+				E74EC3DF27749B3A0074389C /* Extension */,
 				E7CF8D60276BCAE2001A39F8 /* Component */,
 				E7625BDE276B641D00511E4B /* View */,
 				E74EC3DC2774105D0074389C /* Modifier */,
@@ -148,6 +151,14 @@
 				E7CF8D67276BE9CE001A39F8 /* InfoView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E7CC37832774F2830096BEEE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				E7CC37842774F2950096BEEE /* PlaySound.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		E7CF8D60276BCAE2001A39F8 /* Component */ = {
@@ -239,6 +250,7 @@
 				E7625BE4276B7CFB00511E4B /* HeaderView.swift in Sources */,
 				E7625BE2276B657100511E4B /* ContentView.swift in Sources */,
 				E7CF8D6C276BEC81001A39F8 /* ButtonModifier.swift in Sources */,
+				E7CC37852774F2950096BEEE /* PlaySound.swift in Sources */,
 				E7CF8D62276BCAF2001A39F8 /* HeaderComponent.swift in Sources */,
 				E7625BD8276B631500511E4B /* DestinationModel.swift in Sources */,
 				E7625BE1276B643B00511E4B /* CardView.swift in Sources */,
