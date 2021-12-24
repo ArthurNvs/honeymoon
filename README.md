@@ -1,4 +1,4 @@
-# Heoneymoon App
+# Honeymoon App
 SwiftUI Masterclass project
 
 - Reusable UI components
