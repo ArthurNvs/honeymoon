@@ -12,7 +12,6 @@
 		E7625BC7276B5DBA00511E4B /* HoneymoonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BC6276B5DBA00511E4B /* HoneymoonApp.swift */; };
 		E7625BCB276B5DBC00511E4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7625BCA276B5DBC00511E4B /* Assets.xcassets */; };
 		E7625BCE276B5DBC00511E4B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7625BCD276B5DBC00511E4B /* Preview Assets.xcassets */; };
-		E7625BD5276B5F3C00511E4B /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = E7625BD4276B5F3C00511E4B /* Sounds */; };
 		E7625BD8276B631500511E4B /* DestinationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BD7276B631500511E4B /* DestinationModel.swift */; };
 		E7625BDB276B635500511E4B /* DestinationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BDA276B635500511E4B /* DestinationData.swift */; };
 		E7625BE1276B643B00511E4B /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7625BE0276B643B00511E4B /* CardView.swift */; };
@@ -26,6 +25,8 @@
 		E7CF8D68276BE9CE001A39F8 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF8D67276BE9CE001A39F8 /* InfoView.swift */; };
 		E7CF8D6A276BEAC7001A39F8 /* TitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF8D69276BEAC7001A39F8 /* TitleModifier.swift */; };
 		E7CF8D6C276BEC81001A39F8 /* ButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7CF8D6B276BEC81001A39F8 /* ButtonModifier.swift */; };
+		E7F5B74927756DE200DA7C69 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B74727756DE200DA7C69 /* sound-rise.mp3 */; };
+		E7F5B74A27756DE200DA7C69 /* sound-click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7F5B74827756DE200DA7C69 /* sound-click.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,6 @@
 		E7625BC6276B5DBA00511E4B /* HoneymoonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonApp.swift; sourceTree = "<group>"; };
 		E7625BCA276B5DBC00511E4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7625BCD276B5DBC00511E4B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E7625BD4276B5F3C00511E4B /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		E7625BD6276B614800511E4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E7625BD7276B631500511E4B /* DestinationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationModel.swift; sourceTree = "<group>"; };
 		E7625BDA276B635500511E4B /* DestinationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationData.swift; sourceTree = "<group>"; };
@@ -50,6 +50,8 @@
 		E7CF8D67276BE9CE001A39F8 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		E7CF8D69276BEAC7001A39F8 /* TitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModifier.swift; sourceTree = "<group>"; };
 		E7CF8D6B276BEC81001A39F8 /* ButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModifier.swift; sourceTree = "<group>"; };
+		E7F5B74727756DE200DA7C69 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
+		E7F5B74827756DE200DA7C69 /* sound-click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-click.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,7 @@
 				E7625BD9276B631900511E4B /* Model */,
 				E7625BD6276B614800511E4B /* Info.plist */,
 				E7625BCA276B5DBC00511E4B /* Assets.xcassets */,
-				E7625BD4276B5F3C00511E4B /* Sounds */,
+				E7F5B74B27756DEB00DA7C69 /* Sound */,
 				E7625BCC276B5DBC00511E4B /* Preview Content */,
 			);
 			path = Honeymoon;
@@ -168,6 +170,15 @@
 				E7CF8D63276BCBA7001A39F8 /* GuideComponent.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		E7F5B74B27756DEB00DA7C69 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				E7F5B74827756DE200DA7C69 /* sound-click.mp3 */,
+				E7F5B74727756DE200DA7C69 /* sound-rise.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,7 +239,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7625BD5276B5F3C00511E4B /* Sounds in Resources */,
+				E7F5B74927756DE200DA7C69 /* sound-rise.mp3 in Resources */,
+				E7F5B74A27756DE200DA7C69 /* sound-click.mp3 in Resources */,
 				E7625BCE276B5DBC00511E4B /* Preview Assets.xcassets in Resources */,
 				E7625BCB276B5DBC00511E4B /* Assets.xcassets in Resources */,
 			);
